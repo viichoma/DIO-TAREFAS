@@ -5,6 +5,10 @@ public class Banco {
     private String nome;
     private List<Conta> contas;
 
+    Banco(String NomeBanco){
+        this.nome = NomeBanco;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -13,8 +17,10 @@ public class Banco {
         this.nome = nome;
     }
 
-    public List<Conta> getContas() {
-        return contas;
+    public void getContas() {
+        for(Conta c : contas){
+            System.out.println(c.toString());
+        }
     }
 
     public void setContas(List<Conta> contas) {
